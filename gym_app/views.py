@@ -4,6 +4,6 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-def base(request):
+def index(request):
     context = {'latest_question_list': [1, 2, 3, 4]}
-    return render(request, 'base.html', context)
+    return render(request, 'views/index.html', context)
