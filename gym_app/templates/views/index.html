@@ -1,5 +1,71 @@
 {% extends 'base.html' %}
 
 {% block body %}
-    <h2> Vista de inicio </h2>
+    <!-- Carrusel code -->
+    <div class="row">
+        <div class="carousel carousel-slider center" data-indicators="true">
+            <div class="carousel-item red white-text" href="#one!">
+                <h2>Gimnasio III USM</h2>
+                <p class="white-text">Ofrecimos actividades extraprogramátiacs a la comunidad</p>
+            </div>
+            <div class="carousel-item amber white-text" href="#two!">
+                <h2>Sala de Máquinas y Pesas</h2>
+                <p class="white-text">Inscrítebe en una de nuestras sesiones en la sala de máquinas</p>
+            </div>
+            <div class="carousel-item green white-text" href="#three!">
+                <h2>Sala de Aeróbica</h2>
+                <p class="white-text">Inscrítebe en una de nuestras sesiones en la sala de aeróbica</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="padding-top: 20px;">
+        <div class="center">
+            <h4> Noticias </h4>
+            <hr>
+            <div style="padding-bottom: 20px"></div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Facebook</span>
+                    <p>
+                        No olviden ingresar a nuestra página y grupo en Facebook. Encuéntranos en la página Gimnasio III USM y en nuestro grupo de Facebook
+                        Gimnasio 3 USM.
+                    </p>
+                </div>
+                <div class="card-action">
+                    <span style="font-size: 9pt;"> Publicado el 14/03/2015 10:28:19 hrs. </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <div class="card-content">
+                    <span class="card-title">Gimnasio III</span>
+                    <p>
+                        Bienvenido al Portal de Inscripciones del Gimnasio III USM. Inscribe tus bloques y revisa tus inscripciones a través de esta
+                        página con tu usuario y contraseña SIGA.
+                        Si no tienes acceso, acércate a recepción del Gimnasio III.
+                    </p>
+                </div>
+                <div class="card-action">
+                    <span style="font-size: 9pt;"> Publicado el 14/03/2015 10:13:24 hrs </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Carousel javascript -->
+    <script>
+         $('.carousel.carousel-slider').carousel({fullWidth: true});
+         autoplay()
+         function autoplay() {
+             $('.carousel').carousel('next');
+             setTimeout(autoplay, 4500);
+         }
+    </script>
 {% endblock %}
