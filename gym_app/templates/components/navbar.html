@@ -1,14 +1,21 @@
 <nav>
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo">G3USM</a>
         {% if '/logged/' not in request.path %}
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="modal-trigger" href="#loginModal">Ingresar</a></li>
-        </ul>
+            <a href="{% url 'index' %}" class="brand-logo">G3USM</a>
+        {% else %}
+            <a href="{% url 'index_logged' %}" class="brand-logo">G3USM</a>
+        {% endif %}
+        {% if '/logged/' not in request.path %}
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="modal-trigger" href="#loginModal">Ingresar</a></li>
+            </ul>
         {% else %}
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="modal-trigger" href="{% url 'index' %}">Salir</a></li>
-        </ul>
+                <li><a class="modal-trigger" href="{% url 'reservas' %}">Reserva</a></li>
+                <li><a class="modal-trigger" href="{% url 'horario' %}">Horario</a></li>
+                <li><a class="modal-trigger" href="{% url 'asistencias' %}">Asistencia</a></li>
+                <li><a class="modal-trigger" href="{% url 'index' %}">Salir</a></li>
+            </ul>
         {% endif %}
 
     </div>

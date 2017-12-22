@@ -11,3 +11,15 @@ def index(request):
 
 def ficha(request):
     return render(request, 'views/ficha.html')
+
+
+def reservas(request):
+    return render(request, 'views/reservas.html')
+
+
+def asistencias(request):
+    return render(request, 'views/asistencias.html')
+
+
+def horario(request):
+    return render(request, 'views/horario.html')
