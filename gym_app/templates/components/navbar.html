@@ -1,9 +1,16 @@
 <nav>
     <div class="nav-wrapper">
         <a href="#" class="brand-logo">G3USM</a>
+        {% if '/logged/' not in request.path %}
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a class="modal-trigger" href="#loginModal">Ingresar</a></li>
         </ul>
+        {% else %}
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="modal-trigger" href="{% url 'index' %}">Salir</a></li>
+        </ul>
+        {% endif %}
+
     </div>
 </nav>
 
@@ -39,11 +46,11 @@
 
     </div>
     <div class="modal-footer" style="text-align: center;">
-        <a href="www.google.cl" class="modal-action modal-close waves-effect waves-green btn">Ingresar</a>
+        <a href="{% url 'index_logged' %}" class="modal-action modal-close waves-effect waves-green btn">Ingresar</a>
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
     </div>
     <div class="modal-footer" style="text-align: center;">
-        <a href="www.google.cl" class="modal-action modal-close waves-effect waves-green btn-flat" style="font-size: 10px;">¿Problemas con su clave?</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" style="font-size: 10px;">¿Problemas con su clave?</a>
     </div>
 </div>
 

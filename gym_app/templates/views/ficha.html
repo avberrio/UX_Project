@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block body %}
+    <div class="container" style="padding-top: 30px;">
+        <div class="row">
+            <div class="col s12 m8">
+                <div class="card horizontal">
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <span class="card-title">Ficha</span>
+                            <div class="row valign-wrapper" style="padding-top: 20px;">
+                                <div class="col m3">
+                                    <img class="responsive-img circle" border="50" src="{% static 'img/user_photo.png' %}"/>
+                                </div>
+                                <div class="col m9">
+                                    <div class="row">
+                                        <div class="col m3 right-align">
+                                            <strong> Rut </strong>
+                                        </div>
+                                        <div class="col m9">
+                                            18659201-8
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col m3 right-align">
+                                            <strong> Nombre </strong>
+                                        </div>
+                                        <div class="col m9">
+                                            Aldo Valentín Berrios Valenzuela
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col m3 right-align">
+                                            <strong> Carera </strong>
+                                        </div>
+                                        <div class="col m9">
+                                            Ing. Civil Informática, Casa Central, Regular, Última matrícula 2017-2
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col m3 right-align">
+                                            <strong> Rol </strong>
+                                        </div>
+                                        <div class="col m9">
+                                            201304018-7
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col m3 right-align">
+                                            <strong> Ingreso </strong>
+                                        </div>
+                                        <div class="col m9">
+                                            01/01/2013
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col m3 right-align">
+                                            <strong> Nacionalidad </strong>
+                                        </div>
+                                        <div class="col m9">
+                                            Chilena
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card horizontal">
+                    <div class="card-image">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <span class="card-title">Progreso</span>
+                            <p>Mostra progreso en esta parte</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
