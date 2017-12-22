@@ -1,22 +1,31 @@
 {% extends 'base.html' %}
 
+{% load static %}
 {% block body %}
-    <!-- Carrusel code -->
-    <div class="row">
-        <div class="carousel carousel-slider center" data-indicators="true">
-            <div class="carousel-item red white-text" href="#one!">
-                <h2>Gimnasio III USM</h2>
-                <p class="white-text">Ofrecimos actividades extraprogramátiacs a la comunidad</p>
-            </div>
-            <div class="carousel-item amber white-text" href="#two!">
-                <h2>Sala de Máquinas y Pesas</h2>
-                <p class="white-text">Inscrítebe en una de nuestras sesiones en la sala de máquinas</p>
-            </div>
-            <div class="carousel-item green white-text" href="#three!">
-                <h2>Sala de Aeróbica</h2>
-                <p class="white-text">Inscrítebe en una de nuestras sesiones en la sala de aeróbica</p>
-            </div>
-        </div>
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="{% static 'img/gim3.jpg' %}">
+                <div class="caption center-align">
+                    <h3>Gimnasio III USM</h3>
+                    <h5 class="light grey-text text-lighten-3">Ofrecemos actividades extraprogramáticas a la comunidad.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="{% static 'img/maquinas.jpg' %}">
+                <div class="caption left-align">
+                    <h3>Sala de Máquinas y Pesas</h3>
+                    <h5 class="light grey-text text-lighten-3">Inscrítebe en una de nuestras sesiones en la sala de máquinas.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="{% static 'img/aerobica.jpg' %}">
+                <div class="caption right-align">
+                    <h3>Sala de Aeróbica</h3>
+                    <h5 class="light grey-text text-lighten-3">Inscrítebe en una de nuestras sesiones en la sala de aeróbica.</h5>
+                </div>
+            </li>
+        </ul>
     </div>
 
     <div class="container" style="padding-top: 20px;">
@@ -61,11 +70,11 @@
 
     <!-- Carousel javascript -->
     <script>
-         $('.carousel.carousel-slider').carousel({fullWidth: true});
-         autoplay()
-         function autoplay() {
-             $('.carousel').carousel('next');
-             setTimeout(autoplay, 4500);
-         }
+
+        $(document).ready(function () {
+            $('.slider').slider();
+        });
+
+
     </script>
 {% endblock %}
