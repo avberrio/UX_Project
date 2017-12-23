@@ -1,5 +1,250 @@
 {% extends 'base.html' %}
 
+{% load static %}
 {% block body %}
-    Reservas
+    <div class="container" style="padding-top: 30px; padding-bottom: 30px;">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Reserva de período de ejercicio</span>
+                        <div id="image1" class="center" style="padding-top: 30px; padding-bottom: 30px;">
+                            <img src="{% static 'img/r1.png' %}"/>
+                        </div>
+                        <div id="image2" class="center" style="padding-top: 30px; padding-bottom: 30px;">
+                            <img src="{% static 'img/r2.png' %}"/>
+                        </div>
+                        <div id="image3" class="center" style="padding-top: 30px; padding-bottom: 30px;">
+                            <img src="{% static 'img/r3.png' %}"/>
+                        </div>
+                        <div id="image4" class="center" style="padding-top: 30px; padding-bottom: 30px;">
+                            <img src="{% static 'img/r4.png' %}"/>
+                        </div>
+                        <div id="image5" class="center" style="padding-top: 30px; padding-bottom: 30px;">
+                            <img src="{% static 'img/r5.png' %}"/>
+                        </div>
+                        <div id="item1">
+                            <p>
+                                Recuerda que la reserva de horario para el Gimnasio 3 es por períodos, donde cada uno de estos dura 3 semanas. Puedes elegir
+                                horarios
+                                diferentes por semanas para flexibilizar el asunto o bien, puedes elegir los mismos para las 3 semanas. No te preocupes si
+                                esto
+                                resulta
+                                algo confuso, te iremos guiando en el proceso.
+                            </p>
+                        </div>
+                        <div id="item2">
+                            {% include 'renders/table1.html' %}
+                        </div>
+                        <div id="item3">
+                            {% include 'renders/table2.html' %}
+                        </div>
+                        <div id="item4">
+                            {% include 'renders/table3.html' %}
+                        </div>
+                        <div id="item5">
+                            <p> Tienes los siguientes bloques </p>
+                            <p> Semana 1</p>
+                            <ul>
+                                <li> Lunes 09:00 - 10:00 </li>
+                                <li> Miércoles 09:00 - 10:00 </li>
+                                <li> Viernes 09:00 - 10:00 </li>
+                            </ul>
+                            <p> Semana 2</p>
+                            <ul>
+                                <li> Lunes 11:00 - 12:00 </li>
+                                <li> Miércoles 11:00 - 12:00 </li>
+                                <li> Viernes 11:00 - 12:00 </li>
+                            </ul>
+                            <p> Semana 3</p>
+                            <ul>
+                                <li> Lunes 13:00 - 14:00 </li>
+                                <li> Miércoles 13:00 - 14:00 </li>
+                                <li> Viernes 13:00 - 14:00 </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <a id="button11" href="#">Empezar</a>
+
+
+                        <a id="button21" href="#">Continuar a Semana 2 </a>
+                        <a id="button22" href="#">Volver al Tutorial </a>
+
+                        <a id="button31" href="#">Continuar a Semana 3 </a>
+                        <a id="button32" href="#">Retroceder a Semana 1 </a>
+
+                        <a id="button41" href="#">Continuar </a>
+                        <a id="button42" href="#">Retroceder a Semana 2 </a>
+
+                         <button id="button51" data-target="modal1" class="btn modal-trigger">Confirmar Solicitud</button>
+                        <a id="button52" href="#">Retroceder a Semana 3 </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Mensaje</h4>
+            <p>El período de entrenamiento ha sido registrado exitosamente.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="{% url 'index_logged' %}" class="modal-action modal-close waves-effect waves-green btn">Aceptar</a>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
+        });
+        $('#modal1').modal('open');
+        $('#modal1').modal('close');
+    </script>
+
+
+    <script>
+        $('#image1').show();
+        $('#image2').hide();
+        $('#image3').hide();
+        $('#image4').hide();
+        $('#image5').hide();
+
+        $('#item1').show();
+        $('#item2').hide();
+        $('#item3').hide();
+        $('#item4').hide();
+        $('#item5').hide();
+
+        $('#button11').show();
+
+        $('#button21').hide();
+        $('#button22').hide();
+
+        $('#button31').hide();
+        $('#button32').hide();
+
+        $('#button41').hide();
+        $('#button42').hide();
+
+        $('#button51').hide();
+        $('#button52').hide();
+
+
+        $("#button11").click(function () {
+            $('#image1').hide();
+            $('#image2').show();
+
+            $('#button21').show();
+            $('#button22').show();
+
+            $('#button11').hide();
+
+            $('#item1').hide();
+            $('#item2').show();
+        });
+
+        $("#button22").click(function () {
+            $('#image2').hide();
+            $('#image1').show();
+
+            $('#button21').hide();
+            $('#button22').hide();
+
+            $('#button11').show();
+
+            $('#item1').show();
+            $('#item2').hide();
+        });
+
+
+        $("#button21").click(function () {
+            $('#image2').hide();
+            $('#image3').show();
+
+            $('#button31').show();
+            $('#button32').show();
+
+            $('#button21').hide();
+            $('#button22').hide();
+
+            $('#item2').hide();
+            $('#item3').show();
+        });
+
+        $("#button32").click(function () {
+            $('#image3').hide();
+            $('#image2').show();
+
+            $('#button31').hide();
+            $('#button32').hide();
+
+            $('#button21').show();
+            $('#button22').show();
+
+            $('#item2').show();
+            $('#item3').hide();
+        });
+
+        $("#button31").click(function () {
+            $('#image3').hide();
+            $('#image4').show();
+
+            $('#button41').show();
+            $('#button42').show();
+
+            $('#button31').hide();
+            $('#button32').hide();
+
+            $('#item3').hide();
+            $('#item4').show();
+        });
+
+        $("#button42").click(function () {
+            $('#image4').hide();
+            $('#image3').show();
+
+            $('#button41').hide();
+            $('#button42').hide();
+
+            $('#button31').show();
+            $('#button32').show();
+
+            $('#item3').show();
+            $('#item4').hide();
+        });
+
+        $("#button41").click(function () {
+            $('#image4').hide();
+            $('#image5').show();
+
+            $('#button51').show();
+            $('#button52').show();
+
+            $('#button41').hide();
+            $('#button42').hide();
+
+            $('#item4').hide();
+            $('#item5').show();
+        });
+
+        $("#button52").click(function () {
+            $('#image5').hide();
+            $('#image4').show();
+
+            $('#button51').hide();
+            $('#button52').hide();
+
+            $('#button41').show();
+            $('#button42').show();
+
+            $('#item4').show();
+            $('#item5').hide();
+        });
+
+
+
+    </script>
 {% endblock %}
