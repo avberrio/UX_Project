@@ -9,7 +9,7 @@
                         Seleccione el semestre del cual desea ver el horario
                     </div>
                     <div class="col s12 m6">
-                        <select>
+                        <select id="choose_semester">
                             <option value="1" selected>2017 - 3</option>
                             <option value="2">2017 - 2</option>
                             <option value="3">2017 - 1</option>
@@ -51,27 +51,488 @@
                 </div>
             </div>
         </div>
-    <div class="row">
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-content">
-                     <span class="card-title">Máquinas y Pesas</span>
-                    <p>
-                        Horario de máquinas y pesas en esta parte.
-                    </p>
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Máquinas y Pesas</span>
+                        <p id="message1">
+                            No hay horario disponible por el momento.
+                        </p>
+                        <table class="responsive-table highlight bordered" style="font-size: 10pt;" id="maquinas1">
+                            <tr>
+                                <th>Bloques</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miércoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                                <th>Sábado</th>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">09:00 - 10:00</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                            </tr>
+                            <tr>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">10:00 - 11:00</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                            </tr>
+                            <tr>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">11:00 - 12:00</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                            </tr>
+                            <tr>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">12:00 - 13:00</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                            </tr>
+                            <tr>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">13:00 - 14:00</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                            </tr>
+                            <tr>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                            </tr>
+                            <tr style="background-color: #e1e1e1">
+                                <td> 14:00 - 14:30</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">14:30 - 15:30</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                            </tr>
+                            <tr>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">15:30 - 16:30</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                            </tr>
+                            <tr>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">16:30 - 17:00</td>
+                                <td style="background-color: #e1e1e1"></td>
+                                <td style="background-color: #e1e1e1"></td>
+                                <td style="background-color: #e1e1e1"></td>
+                                <td style="background-color: #e1e1e1"></td>
+                                <td style="background-color: #e1e1e1"></td>
+                                <td> Alumnos</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #e1e1e1"></td>
+                                <td style="background-color: #e1e1e1"></td>
+                                <td style="background-color: #e1e1e1"></td>
+                                <td style="background-color: #e1e1e1"></td>
+                                <td style="background-color: #e1e1e1"></td>
+                                <td>O. CORNEJO</td>
+                            </tr>
+                            <tr style="color: #b30000">
+                                <td rowspan="2">17:00 - 18:00</td>
+                                <td> Funcionarios</td>
+                                <td> Funcionarios</td>
+                                <td> Funcionarios</td>
+                                <td> Funcionarios</td>
+                                <td> Funcionarios</td>
+                                <td style="background-color: #e1e1e1"></td>
+                            </tr>
+                            <tr style="color: #b30000">
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td style="background-color: #e1e1e1"></td>
+                            </tr>
+                            <tr style="color: #b30000">
+                                <td rowspan="2">18:00 - 19:00</td>
+                                <td> Funcionarios</td>
+                                <td> Funcionarios</td>
+                                <td> Funcionarios</td>
+                                <td> Funcionarios</td>
+                                <td> Funcionarios</td>
+                                <td style="background-color: #e1e1e1"></td>
+                            </tr>
+                            <tr style="color: #b30000">
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td style="background-color: #e1e1e1"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">19:00 - 20:00</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td style="background-color: #e1e1e1"></td>
+                            </tr>
+                            <tr>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td style="background-color: #e1e1e1"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">20:00 - 21:00</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td> Alumnos</td>
+                                <td style="background-color: #e1e1e1"></td>
+                            </tr>
+                            <tr>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td>O. CORNEJO</td>
+                                <td style="background-color: #e1e1e1"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Aeróbica</span>
+                        <p id="message2">
+                            No hay horario disponible por el momento.
+                        </p>
+                        <table class="responsive-table border-table" style="font-size: 10pt;" id="aerobica1">
+                            <tbody>
+                            <tr align="center">
+                                <td><span>Bloques</span></td>
+                                <td><span>Lunes</span></td>
+                                <td><span>Martes</span></td>
+                                <td><span>Miércoles</span></td>
+                                <td><span>Jueves</span></td>
+                                <td><span>Viernes</span></td>
+                                <td><span>Sábado</span></td>
+                            </tr>
+                            <tr align="center">
+                                <td>09:00
+                                    - 09:30
+                                </td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>09:30
+                                    - 10:00
+                                </td>
+                                <td rowspan="3" id="dia_1_1">HORARIOS LIBRES<br> . NN</td>
+                                <td rowspan="2" id="dia_2_1">GRIT<br>J. BERRIOS</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td rowspan="2" id="dia_4_1">BODY PUMP<br>J. BERRIOS</td>
+                                <td rowspan="3" id="dia_5_1">HORARIOS LIBRES<br> . NN</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>10:00
+                                    - 10:30
+                                </td>
+                                <td rowspan="2" id="dia_3_2">ENTRENAMIENTO FUNCIONAL<br>J. BOTAU</td>
+                                <td rowspan="3" id="dia_6_2">HORARIOS LIBRES<br> . NN</td>
+                            </tr>
+                            <tr align="center">
+                                <td>10:30
+                                    - 11:00
+                                </td>
+                                <td rowspan="2" id="dia_2_3">TRX<br>J. BERRIOS</td>
+                                <td rowspan="2" id="dia_4_3">TRX<br>J. BERRIOS</td>
+                            </tr>
+                            <tr align="center">
+                                <td>11:00
+                                    - 11:30
+                                </td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>11:30
+                                    - 12:00
+                                </td>
+                                <td rowspan="3" id="dia_1_5">CREDITO AERÓBICA<br>N. CERIANI <br>Docencia</td>
+                                <td rowspan="3" id="dia_2_5">BAILE SOCIAL<br>E. ORMAZABAL<br>Extracurricular</td>
+                                <td rowspan="2" id="dia_3_5">BODY PUMP<br>J. BERRIOS</td>
+                                <td rowspan="3" id="dia_4_5">RAMA FOLKLORE<br>J. SALAZAR<br>Extracurricular</td>
+                                <td rowspan="3" id="dia_5_5">CREDITO AERÓBICA<br>N. CERIANI <br>Docencia</td>
+                                <td rowspan="3" id="dia_6_5">HORARIOS LIBRES<br> . NN</td>
+                            </tr>
+                            <tr align="center">
+                                <td>12:00
+                                    - 12:30
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td>12:30
+                                    - 13:00
+                                </td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>13:00
+                                    - 13:30
+                                </td>
+                                <td rowspan="2" id="dia_1_8">ENTRENAMIENTO FUNCIONAL<br>J. BOTAU</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td rowspan="2" id="dia_3_8">TRX<br>G. RIESCO</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td rowspan="2" id="dia_5_8">TRX<br>G. RIESCO</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>13:30
+                                    - 14:00
+                                </td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>14:00
+                                    - 14:30
+                                </td>
+                                <td rowspan="3" id="dia_1_10">REHABILITACION KINESIOLOGICA SANSANITO<br> . NN<br>Extracurricular</td>
+                                <td rowspan="3" id="dia_2_10">CREDITO KARATE<br>S. NUÑEZ<br>Docencia</td>
+                                <td rowspan="3" id="dia_3_10">REHABILITACION KINESIOLOGICA SANSANITO<br> . NN<br>Extracurricular</td>
+                                <td rowspan="3" id="dia_4_10">CREDITO KARATE<br>S. NUÑEZ<br>Docencia</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td rowspan="3" id="dia_6_10">HORARIOS LIBRES<br> . NN</td>
+                            </tr>
+                            <tr align="center">
+                                <td>14:30
+                                    - 15:00
+                                </td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>15:00
+                                    - 15:30
+                                </td>
+                                <td rowspan="2" id="dia_5_12">GRIT<br>J. BERRIOS</td>
+                            </tr>
+                            <tr align="center">
+                                <td>15:30
+                                    - 16:00
+                                </td>
+                                <td rowspan="3" id="dia_1_13">HORARIOS LIBRES<br> . NN</td>
+                                <td rowspan="3" id="dia_2_13">HORARIOS LIBRES<br> . NN</td>
+                                <td rowspan="3" id="dia_3_13">CREDITO AERÓBICA<br>N. CERIANI <br>Docencia</td>
+                                <td rowspan="3" id="dia_4_13">HORARIOS LIBRES<br> . NN</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>16:00
+                                    - 16:30
+                                </td>
+                                <td rowspan="2" id="dia_5_14">ENTRENAMIENTO FUNCIONAL<br>J. BERRIOS</td>
+                                <td rowspan="3" id="dia_6_14">HORARIOS LIBRES<br> . NN</td>
+                            </tr>
+                            <tr align="center">
+                                <td>16:30
+                                    - 17:00
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td>17:00
+                                    - 17:30
+                                </td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>17:30
+                                    - 18:00
+                                </td>
+                                <td rowspan="2" id="dia_1_17">AEROBICA FUNCIONARIOS<br> . NN<br>Funcionarios</td>
+                                <td rowspan="2" id="dia_2_17">AEROBICA FUNCIONARIOS<br> . NN<br>Funcionarios</td>
+                                <td rowspan="2" id="dia_3_17">AEROBICA FUNCIONARIOS<br> . NN<br>Funcionarios</td>
+                                <td rowspan="2" id="dia_4_17">AEROBICA FUNCIONARIOS<br> . NN<br>Funcionarios</td>
+                                <td rowspan="2" id="dia_5_17">AEROBICA FUNCIONARIOS<br> . NN<br>Funcionarios</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>18:00
+                                    - 18:30
+                                </td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>18:30
+                                    - 19:00
+                                </td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>19:00
+                                    - 19:30
+                                </td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td rowspan="3" id="dia_2_20">RAMA FOLKLORE<br>J. SALAZAR<br>Extracurricular</td>
+                                <td rowspan="3" id="dia_3_20">REHABILITACION KINESIOLOGICA SANSANITO<br> . NN<br>Extracurricular</td>
+                                <td rowspan="3" id="dia_4_20">RAMA FOLKLORE<br>J. SALAZAR<br>Extracurricular</td>
+                                <td rowspan="3" id="dia_5_20">HORARIOS LIBRES<br> . NN</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>19:30
+                                    - 20:00
+                                </td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>20:00
+                                    - 20:30
+                                </td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            <tr align="center">
+                                <td>20:30 - 21:00
+                                </td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                                <td style="background-color: #e1e1e1">&nbsp;</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-content">
-                     <span class="card-title">Aeróbica</span>
-                    <p>
-                        Horario de máquinas y pesas en esta parte.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+        <script>
+            // hide by default;
+            $('#maquinas1').show();
+            $('#aerobica1').show();
+            $('#message1').hide();
+            $('#message2').hide();
+
+            $('#choose_semester').change(function () {
+                if ($(this).val() == 1) {
+                    $('#maquinas1').show();
+                    $('#aerobica1').show();
+                    $('#message1').hide();
+                    $('#message2').hide();
+                } else {
+                    $('#maquinas1').hide();
+                    $('#aerobica1').hide();
+                    $('#message1').show();
+                    $('#message2').show();
+                }
+            });
+        </script>
     </div>
 {% endblock %}
